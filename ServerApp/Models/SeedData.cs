@@ -42,8 +42,10 @@ namespace ServerApp.Models
                     Category = "Watersports",
                     Price = 275,
                     Supplier = s1,
-                    Ratings = new List<Rating> {
-                        new Rating { Stars = 4 }, new Rating { Stars = 3 }}
+                    Ratings = new List<Rating>
+                    {
+                        new Rating {Stars = 4}, new Rating {Stars = 3}
+                    }
                 },
                 new Product
                 {
@@ -52,8 +54,10 @@ namespace ServerApp.Models
                     Category = "Watersports",
                     Price = 48.95m,
                     Supplier = s1,
-                    Ratings = new List<Rating> {
-                        new Rating { Stars = 2 }, new Rating { Stars = 5 }}
+                    Ratings = new List<Rating>
+                    {
+                        new Rating {Stars = 2}, new Rating {Stars = 5}
+                    }
                 },
                 new Product
                 {
@@ -62,8 +66,10 @@ namespace ServerApp.Models
                     Category = "Soccer",
                     Price = 19.50m,
                     Supplier = s2,
-                    Ratings = new List<Rating> {
-                        new Rating { Stars = 1 }, new Rating { Stars = 3 }}
+                    Ratings = new List<Rating>
+                    {
+                        new Rating {Stars = 1}, new Rating {Stars = 3}
+                    }
                 },
                 new Product
                 {
@@ -72,7 +78,7 @@ namespace ServerApp.Models
                     Category = "Soccer",
                     Price = 34.95m,
                     Supplier = s2,
-                    Ratings = new List<Rating> { new Rating { Stars = 3 } }
+                    Ratings = new List<Rating> {new Rating {Stars = 3}}
                 },
                 new Product
                 {
@@ -81,8 +87,11 @@ namespace ServerApp.Models
                     Category = "Soccer",
                     Price = 79500,
                     Supplier = s2,
-                    Ratings = new List<Rating> { new Rating { Stars = 1 },
-                        new Rating { Stars = 4 }, new Rating { Stars = 3 }}
+                    Ratings = new List<Rating>
+                    {
+                        new Rating {Stars = 1},
+                        new Rating {Stars = 4}, new Rating {Stars = 3}
+                    }
                 },
                 new Product
                 {
@@ -91,8 +100,11 @@ namespace ServerApp.Models
                     Category = "Chess",
                     Price = 16,
                     Supplier = s3,
-                    Ratings = new List<Rating> { new Rating { Stars = 5 },
-                        new Rating { Stars = 4 }}
+                    Ratings = new List<Rating>
+                    {
+                        new Rating {Stars = 5},
+                        new Rating {Stars = 4}
+                    }
                 },
                 new Product
                 {
@@ -101,7 +113,7 @@ namespace ServerApp.Models
                     Category = "Chess",
                     Price = 29.95m,
                     Supplier = s3,
-                    Ratings = new List<Rating> { new Rating { Stars = 3 } }
+                    Ratings = new List<Rating> {new Rating {Stars = 3}}
                 },
                 new Product
                 {
@@ -122,4 +134,5 @@ namespace ServerApp.Models
 
             context.SaveChanges();
         }
+    }
 }
