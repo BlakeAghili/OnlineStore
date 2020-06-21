@@ -21,6 +21,9 @@ namespace ServerApp.Controllers
         [HttpGet("{id}")]
         public Product GetProduct(long id)
         {
+            // just to simulate a load delay over network... 
+            System.Threading.Thread.Sleep(2500);
+
             return context.Products.Find(id);
         }
     }
