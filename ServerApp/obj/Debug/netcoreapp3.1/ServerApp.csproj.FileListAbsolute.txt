@@ -81,3 +81,7 @@ C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\n
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\MyOwnGitHub\OnlineStore\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
+C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
