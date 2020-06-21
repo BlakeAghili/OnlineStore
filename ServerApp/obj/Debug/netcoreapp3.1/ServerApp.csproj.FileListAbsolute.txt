@@ -33,7 +33,6 @@ C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeco
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeconfig.dev.json
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.pdb
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.Views.pdb
-C:\MyOwnGitHub\OnlineStore\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
 C:\MyOwnGitHub\OnlineStore\ServerApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Placeholder.cshtml.g.cs
 C:\MyOwnGitHub\OnlineStore\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.genruntimeconfig.cache
 C:\MyOwnGitHub\OnlineStore\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CopyComplete
@@ -81,3 +80,4 @@ C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\na
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\MyOwnGitHub\OnlineStore\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\MyOwnGitHub\OnlineStore\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
