@@ -1,16 +1,20 @@
 import { Product } from "./product.model";
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
+import {Filter} from "./configClasses.repository";
 
-const productUrl = '/api/products'
+const productsUrl = '/api/products'
 @Injectable()
 export class Repository {
   product: Product;
   products: Product[];
+  filter: Filter = new Filter();
   constructor(private http: HttpClient) {
     // this.product = JSON.parse(document.querySelector("#data").textContent);
     //this.getProduct(1);
-    this.getProducts(true);
+    this.filter.category = 'soccer';
+    this.filter.related = true;
+    this.getProducts();
   }
 
   getProduct(id: number) {
@@ -18,9 +22,14 @@ export class Repository {
       .subscribe(p => this.product = p);
   }
 
-  getProducts(related = false) {
-    this.http.get<Product[]>(`${productUrl}?related=${related}`)
-      .subscribe(items => this.products = items);
+  getProducts() {
+    let url = `${productsUrl}?related=${this.filter.related}`;
+    if (this.filter.category) {
+      url +=  `&category=${this.filter.category}`;
+    }
+    if (this.filter.search) {
+      url += `&search=${this.filter.search}`;
+    }
+    this.http.get<Product[]>(url).subscribe(prods => this.products = prods);
   }
-
 }
