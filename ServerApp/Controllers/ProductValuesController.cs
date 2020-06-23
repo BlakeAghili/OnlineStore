@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServerApp.Models;
+using ServerApp.Models.BindingTargets;
 
 namespace ServerApp.Controllers
 {
@@ -94,6 +95,27 @@ namespace ServerApp.Controllers
             else
             {
                 return query;
+            }
+        }
+
+        [HttpPost]
+        public IActionResult CreateProduct([FromBody] ProductData pData)
+        {
+            if (ModelState.IsValid)
+            {
+                Product p = pData.Product;
+                if (p.Supplier != null && p.Supplier.SupplierId != 0)
+                {
+                    context.Attach(p.Supplier);
+                }
+
+                context.Add(p);
+                context.SaveChanges();
+                return Ok(p.ProductId);
+            }
+            else
+            {
+                return BadRequest(ModelState);
             }
         }
 
