@@ -55,5 +55,35 @@ namespace ServerApp.Controllers
 
             return result;
         }
+
+        [HttpGet]
+        public IEnumerable<Product> GetProducts(bool related = false)
+        {
+            IQueryable<Product> query = context.Products;
+
+            if (related)
+            {
+                query = query.Include(p => p.Supplier).Include(p => p.Ratings);
+                List<Product> data = query.ToList();
+
+                data.ForEach(p => {
+                    if (p.Supplier != null)
+                    {
+                        p.Supplier.Products = null;
+                    }
+                    if (p.Ratings != null)
+                    {
+                        p.Ratings.ForEach(r => r.Product = null);
+                    }
+                });
+
+                return data;
+            }
+            else
+            {
+                return query;
+            }
+        }
+
     }
 }
