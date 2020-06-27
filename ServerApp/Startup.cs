@@ -33,9 +33,8 @@ namespace ServerApp
             services.AddControllersWithViews()
                 .AddJsonOptions(opts => {
                     opts.JsonSerializerOptions.IgnoreNullValues = true;
-                });
-
-            //services.AddRazorPages();
+                }).AddNewtonsoftJson();
+            services.AddRazorPages();
 
             services.AddSwaggerGen(options => {
                 options.SwaggerDoc("v1",

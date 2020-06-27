@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClientApp\\src",
-    "\\ServerApp"
+    "\\ServerApp",
+    "\\ServerApp\\Controllers",
+    "\\ServerApp\\Models",
+    "\\ServerApp\\Models\\BindingTargets"
   ],
-  "SelectedNode": "\\ServerApp\\ServerApp.csproj",
+  "SelectedNode": "\\ServerApp",
   "PreviewInSolutionExplorer": false
 }

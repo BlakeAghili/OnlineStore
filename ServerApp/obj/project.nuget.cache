@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1puHoMkj5SWtJ78HX6uTIhykE9p45h/D/fT1doW1TQotiZRmFZRMwXv7fWtzfYo5Q4cvfKAT7pj/4FCSNO0rgw==",
+  "dgSpecHash": "MertU4z0pyATa2/xjC4dYOCgD32pX72Ejj95lEMyDS7g0qBGEdwVTT5v437fHMeyxbLXB3xXk9uwI0cV4Ne1eA==",
   "success": true,
   "projectFilePath": "C:\\MyOwnGitHub\\OnlineStore\\ServerApp\\ServerApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\baghili\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.5\\microsoft.aspnetcore.jsonpatch.3.1.5.nupkg.sha512",
+    "C:\\Users\\baghili\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.5\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.5.nupkg.sha512",
     "C:\\Users\\baghili\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.5\\microsoft.aspnetcore.nodeservices.3.1.5.nupkg.sha512",
     "C:\\Users\\baghili\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.5\\microsoft.aspnetcore.spaservices.3.1.5.nupkg.sha512",
     "C:\\Users\\baghili\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\3.1.5\\microsoft.aspnetcore.spaservices.extensions.3.1.5.nupkg.sha512",
@@ -41,6 +43,7 @@
     "C:\\Users\\baghili\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\baghili\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\baghili\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
