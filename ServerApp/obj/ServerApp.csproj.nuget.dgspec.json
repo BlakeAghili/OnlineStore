@@ -10,14 +10,11 @@
         "projectUniqueName": "C:\\MyOwnGitHub\\OnlineStore\\ServerApp\\ServerApp.csproj",
         "projectName": "ServerApp",
         "projectPath": "C:\\MyOwnGitHub\\OnlineStore\\ServerApp\\ServerApp.csproj",
-        "packagesPath": "C:\\Users\\baghili\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Blake\\.nuget\\packages\\",
         "outputPath": "C:\\MyOwnGitHub\\OnlineStore\\ServerApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\baghili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Blake\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
