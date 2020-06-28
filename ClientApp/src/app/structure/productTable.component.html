@@ -5,6 +5,13 @@
     <td>{{p.name}}</td>
     <td>{{p.category}}</td>
     <td>{{p.price}}</td>
+    <td>
+      <button class="btn btn-primary btn-sm"
+              (click)="selectProduct(p.productId)"
+      >
+        Details
+      </button>
+    </td>
   </tr>
   </tbody>
 </table>
