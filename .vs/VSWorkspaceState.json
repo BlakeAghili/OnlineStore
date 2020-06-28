@@ -6,6 +6,6 @@
     "\\ServerApp\\Models",
     "\\ServerApp\\Models\\BindingTargets"
   ],
-  "SelectedNode": "\\ServerApp",
+  "SelectedNode": "\\ServerApp\\Controllers\\ProductValuesController.cs",
   "PreviewInSolutionExplorer": false
 }

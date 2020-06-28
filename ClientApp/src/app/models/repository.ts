@@ -1,11 +1,11 @@
 import { Product } from "./product.model";
-import {HttpClient} from "@angular/common/http";
-import {Injectable} from "@angular/core";
-import {Filter} from "./configClasses.repository";
-import {Supplier} from "./supplier.model";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Filter } from "./configClasses.repository";
+import { Supplier } from "./supplier.model";
 
-const productsUrl = '/api/products';
-const suppliersUrl = '/api/suppliers';
+const productsUrl = "/api/products";
+const suppliersUrl = "/api/suppliers";
 
 @Injectable()
 export class Repository {
@@ -13,16 +13,15 @@ export class Repository {
   products: Product[];
   suppliers: Supplier[] = [];
   filter: Filter = new Filter();
+
   constructor(private http: HttpClient) {
-    // this.product = JSON.parse(document.querySelector("#data").textContent);
-    //this.getProduct(1);
-    //this.filter.category = 'soccer';
+    //this.filter.category = "soccer";
     this.filter.related = true;
     this.getProducts();
   }
 
   getProduct(id: number) {
-    this.http.get<Product>("/api/products/" + id)
+    this.http.get<Product>(`${productsUrl}/${id}`)
       .subscribe(p => this.product = p);
   }
 
@@ -57,7 +56,6 @@ export class Repository {
   }
 
   createProductAndSupplier(prod: Product, supp: Supplier) {
-    console.log(supp);
     let data = {
       name: supp.name, city: supp.city, state: supp.state
     };
@@ -66,7 +64,6 @@ export class Repository {
       .subscribe(id => {
         supp.supplierId = id;
         prod.supplier = supp;
-        //console.log('sup was:' + JSON.stringify(supp));
         this.suppliers.push(supp);
         if (prod != null) {
           this.createProduct(prod);
@@ -96,7 +93,6 @@ export class Repository {
     let patch = [];
     changes.forEach((value, key) =>
       patch.push({ op: "replace", path: key, value: value }));
-
     this.http.patch(`${productsUrl}/${id}`, patch)
       .subscribe(() => this.getProducts());
   }
