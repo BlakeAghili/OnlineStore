@@ -33,7 +33,8 @@ export class Repository {
     if (this.filter.search) {
       url += `&search=${this.filter.search}`;
     }
-    this.http.get<Product[]>(url).subscribe(prods => this.products = prods);
+    this.http.get<Product[]>(url)
+      .subscribe(prods => this.products = prods);
   }
 
   getSuppliers() {
