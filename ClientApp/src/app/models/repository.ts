@@ -22,7 +22,7 @@ export class Repository {
 
   constructor(private http: HttpClient) {
     this.filter.related = true;
-    this.getProducts();
+    //this.getProducts();  not needed anymore. NavigationService is calling it now.
   }
 
   getProduct(id: number) {
