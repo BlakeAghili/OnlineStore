@@ -52,7 +52,7 @@ namespace ServerApp.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetProducts(string category, string search, bool related = false) {
+        public IActionResult GetProducts(string category, string search, bool related = false, bool metaData = false) {
             IQueryable<Product> query = context.Products;
 
             if (!string.IsNullOrWhiteSpace(category)) {
@@ -75,10 +75,21 @@ namespace ServerApp.Controllers
 
                     p.Ratings?.ForEach(r => r.Product = null);
                 });
-                return data;
-            } else {
-                return query;
+                return metaData ? CreateMetaData(data) : Ok(data);
+            } 
+            else
+            {
+                return metaData ? CreateMetaData(query) : Ok(query);
             }
+        }
+
+        private IActionResult CreateMetaData(IEnumerable<Product> products)
+        {
+            return Ok(new
+            {
+                data = products,
+                categories = context.Products.Select(p => p.Category).Distinct().OrderBy(c => c)
+            });
         }
 
         [HttpPost]

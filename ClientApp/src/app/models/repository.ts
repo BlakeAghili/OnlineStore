@@ -1,11 +1,16 @@
-import { Product } from "./product.model";
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Filter } from "./configClasses.repository";
-import { Supplier } from "./supplier.model";
+import { Product } from './product.model';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Filter } from './configClasses.repository';
+import { Supplier } from './supplier.model';
 
-const productsUrl = "/api/products";
-const suppliersUrl = "/api/suppliers";
+const productsUrl = '/api/products';
+const suppliersUrl = '/api/suppliers';
+
+type productsMetaData = {
+  data: Product[],
+  categories: string[]
+};
 
 @Injectable()
 export class Repository {
@@ -13,9 +18,9 @@ export class Repository {
   products: Product[];
   suppliers: Supplier[] = [];
   filter: Filter = new Filter();
+  categories: string[] = [];
 
   constructor(private http: HttpClient) {
-    //this.filter.category = "soccer";
     this.filter.related = true;
     this.getProducts();
   }
@@ -33,8 +38,14 @@ export class Repository {
     if (this.filter.search) {
       url += `&search=${this.filter.search}`;
     }
-    this.http.get<Product[]>(url)
-      .subscribe(prods => this.products = prods);
+
+    url = url + '&metadata=true';
+
+    this.http.get<productsMetaData>(url)
+      .subscribe(items => {
+        this.products = items.data;
+        this.categories = items.categories;
+      });
   }
 
   getSuppliers() {
@@ -43,7 +54,7 @@ export class Repository {
   }
 
   createProduct(prod: Product) {
-    let data = {
+    const data = {
       name: prod.name, category: prod.category,
       description: prod.description, price: prod.price,
       supplier: prod.supplier ? prod.supplier.supplierId : 0
@@ -57,7 +68,7 @@ export class Repository {
   }
 
   createProductAndSupplier(prod: Product, supp: Supplier) {
-    let data = {
+    const data = {
       name: supp.name, city: supp.city, state: supp.state
     };
 
@@ -73,7 +84,7 @@ export class Repository {
   }
 
   replaceProduct(prod: Product) {
-    let data = {
+    const data = {
       name: prod.name, category: prod.category,
       description: prod.description, price: prod.price,
       supplier: prod.supplier ? prod.supplier.supplierId : 0
@@ -83,7 +94,7 @@ export class Repository {
   }
 
   replaceSupplier(supp: Supplier) {
-    let data = {
+    const data = {
       name: supp.name, city: supp.city, state: supp.state
     };
     this.http.put(`${suppliersUrl}/${supp.supplierId}`, data)
@@ -91,9 +102,9 @@ export class Repository {
   }
 
   updateProduct(id: number, changes: Map<string, any>) {
-    let patch = [];
+    const patch = [];
     changes.forEach((value, key) =>
-      patch.push({ op: "replace", path: key, value: value }));
+      patch.push({ op: 'replace', path: key, value }));
     this.http.patch(`${productsUrl}/${id}`, patch)
       .subscribe(() => this.getProducts());
   }
